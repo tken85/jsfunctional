@@ -115,28 +115,74 @@ function longest(){
  * 2. write a console.assert to test them
  */
 
-// .sort()
 
+// special shout out to the MDN for explaining arrays so well https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
+// .sort()
+  var myArr = ["dog", "cat", "bat", "cow"];
+  myArr.sort();
+
+console.assert( myArr[0] === "bat");
 // .concat()
+  var movies = ["The Empire Strikes Back", "Jurassic World", "The Avengers"];
+  var nflTeams = ["Saints", "Texans", "Panthers"];
+
+  var mishMash = movies.concat(nflTeams);
+
+  console.assert( mishMash.length === 6);
 
 // .indexOf()
+var rando = [0, 7, 8, 4, 16];
+var indexed = rando.indexOf(8);
 
+
+console.assert(indexed === 2);
 // .split()
 
+  var myStr = "I've been working on the railroad. All the live long day";
+  var splitArr = myStr.split(" ");
+
+  console.assert (splitArr.length === 11);
+
 // .join()
+  var newArr = ["Well", "that", "escalated", "quickly"];
+  var newStr = newArr.join(" ");
+
+  console.assert (newStr === "Well that escalated quickly");
 
 // .pop()
+  var nextArr = [1, 2, 5, 7];
+  nextArr.pop();
 
+  console.assert (nextArr.length === 3);
 // .push()
+  var cereal = ["Captain Crunch", "Cocoa Puffs", "Honey Bunches of Oats"];
 
+  cereal.push("Apple Jacks", "Cheerios");
+
+  console.assert (cereal[4] === "Cheerios");
 // .slice()
+  var nums = [2, 7, 4, 8, 6, 15];
+  var subset = nums.slice(1, 3);
 
+  console.assert(subset[1] === 4);
 // .splice()
+var splicing = [2, 7, 8, 12, 35];
+
+splicing.splice(3, 2, 6, 7);
+
+console.assert(splicing[3] === 6);
 
 // .shift()
+var shifting = [2, 11, 12, 17, 34];
+shifting.shift();
 
+console.assert(shifting[0] === 11);
 // .unshift()
+var unshifting = [0, 12, 8];
+unshifting.unshift(6);
 
+console.assert(unshifting[1]===0);
 // .filter()
 
 // .map()
