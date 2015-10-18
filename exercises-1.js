@@ -184,5 +184,18 @@ unshifting.unshift(6);
 
 console.assert(unshifting[1]===0);
 // .filter()
+function shortText (input){
+  return input.length <= 4;
+}
+
+var origArray = ["dog", "cat", "goose", "ostrich"];
+var shortArray = origArray.filter(shortText);
+
+console.assert(shortArray.length === 2);
 
 // .map()
+
+var preMap = [2.7, 3.2, 4.5];
+var mapped = preMap.map(Math.floor);
+
+console.assert(mapped[1]=== 3);
